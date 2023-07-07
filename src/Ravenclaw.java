@@ -12,6 +12,22 @@ public class Ravenclaw extends Hogwarts {
         this.creation = creation;
     }
 
+    public int getSmart() {
+        return smart;
+    }
+
+    public int getWisdom() {
+        return wisdom;
+    }
+
+    public int getWit() {
+        return wit;
+    }
+
+    public int getCreation() {
+        return creation;
+    }
+
     @Override
     public String toString() {
         return super.toString() +
@@ -21,13 +37,14 @@ public class Ravenclaw extends Hogwarts {
                 "\nТворчество " + creation + "\n";
     }
 
-    @Override
-    protected int sumDepartmentParameters() {
-        return smart + wisdom + wit + creation;
-    }
-
-    @Override
-    protected String getDepartmentName() {
-        return "Когтевран";
+    public void compareStudent(Ravenclaw ravenclawStudent) {
+        int sumThis = this.smart + this.wisdom + this.wit + this.creation;
+        int sumGryffindorStudent = ravenclawStudent.getSmart() + ravenclawStudent.getWisdom() + ravenclawStudent.getWit() + ravenclawStudent.getCreation();
+        if (sumThis > sumGryffindorStudent) {
+            System.out.println(this.getFullName() + " лучший когтевранец, чем " + ravenclawStudent.getFullName());
+        } else {
+            System.out.println(ravenclawStudent.getFullName() + " лучший когтевранец, чем " + this.getFullName());
+        }
+        System.out.println();
     }
 }

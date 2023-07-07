@@ -23,33 +23,11 @@ public abstract class Hogwarts {
                 "\nРасстояние трансгрессии " + apparitionDistance;
     }
 
-    protected abstract int sumDepartmentParameters();
-
-    protected abstract String getDepartmentName();
-
-    protected void compareToDepartmentParameters(Hogwarts otherStudent) {
-        if (this.getClass() == otherStudent.getClass()) {
-            if (this.sumDepartmentParameters() > otherStudent.sumDepartmentParameters()) {
-                System.out.println(this.getFullName() + " лучший студент факультета " + this.getDepartmentName() + " чем " + otherStudent.getFullName());
-            } else {
-                System.out.println(otherStudent.getFullName() + " лучший студент факультета " + this.getDepartmentName() + " чем " + this.getFullName());
-            }
-        } else {
-            System.out.println("Вы ошиблись, это студенты разных факультетов");
-        }
-        System.out.println();
-    }
-
     public void compareToCommonParameters(Hogwarts otherStudent) {
-        if (this.powerOfMagic > otherStudent.powerOfMagic) {
-            System.out.println(this.getFullName() + " обладает бОльей силой магии, чем " + otherStudent.getFullName());
+        if (this.powerOfMagic + this.apparitionDistance > otherStudent.powerOfMagic + otherStudent.apparitionDistance) {
+            System.out.println(this.getFullName() + " обладает бОльшей силой магии, чем " + otherStudent.getFullName());
         } else {
-            System.out.println(otherStudent.getFullName() + " обладает бОльей силой магии, чем " + this.getFullName());
-            if (this.apparitionDistance > otherStudent.apparitionDistance) {
-                System.out.println(this.getFullName() + " обладает бОльшим расстоянием трансгрессии, чем " + otherStudent.getFullName());
-            } else {
-                System.out.println(otherStudent.getFullName() + " обладает бОльшим расстоянием трансгрессии, чем " + this.getFullName());
-            }
+            System.out.println(otherStudent.getFullName() + " обладает бОльшей силой магии, чем " + this.getFullName());
         }
         System.out.println();
     }

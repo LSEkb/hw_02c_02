@@ -24,12 +24,34 @@ public class Slytherin extends Hogwarts {
                 "\nЖажда власти " + powerHungry + "\n";
     }
 
-    @Override
-    protected int sumDepartmentParameters() {
-        return cunning + determination + ambition + ingenuity + powerHungry;
+    public int getCunning() {
+        return cunning;
     }
-    @Override
-    protected String getDepartmentName() {
-        return "Слизерин";
+
+    public int getDetermination() {
+        return determination;
+    }
+
+    public int getAmbition() {
+        return ambition;
+    }
+
+    public int getIngenuity() {
+        return ingenuity;
+    }
+
+    public int getPowerHungry() {
+        return powerHungry;
+    }
+
+    public void compareStudent(Slytherin slytherinStudent) {
+        int sumThis = this.cunning + this.determination + this.ambition + this.ingenuity + this.powerHungry;
+        int sumGryffindorStudent = slytherinStudent.getCunning() + slytherinStudent.getDetermination() + slytherinStudent.getIngenuity() + slytherinStudent.getIngenuity() + slytherinStudent.getPowerHungry();
+        if (sumThis > sumGryffindorStudent) {
+            System.out.println(this.getFullName() + " лучший слизеринец, чем " + slytherinStudent.getFullName());
+        } else {
+            System.out.println(slytherinStudent.getFullName() + " лучший слизеринец, чем " + this.getFullName());
+        }
+        System.out.println();
     }
 }

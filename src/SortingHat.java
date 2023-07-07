@@ -1,9 +1,9 @@
-public class Sorting_Hat {
+public class SortingHat {
 
     public static void main(String[] args) {
-        Griffindor harryPotter = new Griffindor("Гарри", "Поттер", 70, 30, 30, 40, 40);
-        Griffindor hermioneGranger = new Griffindor("Гермиона", "Грейнджер", 30, 40, 60, 50, 56);
-        Griffindor ronWeasley = new Griffindor("Рон", "Уизли", 30, 30, 50, 60, 70);
+        Gryffindor harryPotter = new Gryffindor("Гарри", "Поттер", 70, 30, 30, 40, 40);
+        Gryffindor hermioneGranger = new Gryffindor("Гермиона", "Грейнджер", 30, 40, 60, 50, 56);
+        Gryffindor ronWeasley = new Gryffindor("Рон", "Уизли", 30, 30, 50, 60, 70);
         Slytherin dracoMalfoy = new Slytherin("Драко", "Малфой", 60, 50, 50, 50, 70, 40, 45);
         Slytherin grahamMontague = new Slytherin("Грэхем", "Монтегю", 40, 20, 35, 56, 70, 30, 50);
         Slytherin gregoryGoyle = new Slytherin("Грегори", "Гойл", 30, 45, 60, 56, 45, 38, 60);
@@ -18,7 +18,9 @@ public class Sorting_Hat {
 
         ronWeasley.compareToCommonParameters(padmaPatil);
 
-        grahamMontague.compareToDepartmentParameters(gregoryGoyle);
-        choChang.compareToDepartmentParameters(gregoryGoyle);
+        hermioneGranger.compareStudent(harryPotter);
+        dracoMalfoy.compareStudent(gregoryGoyle);
+        cedricDiggory.compareStudent(zachariasSmith);
+        choChang.compareStudent(marcusBelby);
     }
 }

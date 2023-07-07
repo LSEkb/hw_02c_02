@@ -18,12 +18,26 @@ public class Hufflepuff extends Hogwarts {
                 "\nХрабрость " + honesty + "\n";
     }
 
-    @Override
-    protected int sumDepartmentParameters() {
-        return hardWorking + loyalty + honesty;
+    public int getHardWorking() {
+        return hardWorking;
     }
-    @Override
-    protected String getDepartmentName() {
-        return "Пуффендуй";
+
+    public int getLoyalty() {
+        return loyalty;
+    }
+
+    public int getHonesty() {
+        return honesty;
+    }
+
+    public void compareStudent(Hufflepuff hufflepuffStudent) {
+        int sumThis = this.hardWorking + this.loyalty + this.honesty;
+        int sumGryffindorStudent = hufflepuffStudent.getHardWorking() + hufflepuffStudent.getLoyalty() + hufflepuffStudent.getHonesty();
+        if (sumThis > sumGryffindorStudent) {
+            System.out.println(this.getFullName() + " лучший пуффендуец, чем " + hufflepuffStudent.getFullName());
+        } else {
+            System.out.println(hufflepuffStudent.getFullName() + " лучший пуффендуец, чем " + this.getFullName());
+        }
+        System.out.println();
     }
 }
